@@ -13,8 +13,8 @@
     <div id="form-wrapper">
 
       <div id="form-item">
-        <label for="name" class="primary">Name</label>
-        <input type="text" id="name" required/>
+        <label for="full_name" class="primary">Name</label>
+        <input type="text" id="full_name" required/>
       </div>
 
       <div id="form-item">
@@ -28,8 +28,17 @@
       </div>
 
       <div id="form-item">
-        <label for="population" class="primary">Population</label>
-        <input type="text" id="population" required/>
+        <label for="category" class="primary">Category</label>
+        <select id="category">
+          <option value="" disbled selected></option>
+          <option value="EX">Extinct (EX)</option>
+          <option value="EW">Extinct in the wild (EW)</option>
+          <option value="CR">Critically endangered (CR)</option>
+          <option value="EN">Endangered (EN)</option>
+          <option value="VU">Vulnerable (VU)</option>
+          <option value="NT">Near-threatened (NT)</option>
+          <option value="LC">Least concern (LC)</option>
+        </select>
       </div>
 
       <div id="form-item">

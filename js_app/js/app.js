@@ -8,37 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const createElementWithText = (element, value, parentElement) => {
+const createElementWithText = (element, label, value, parentElement) => {
   const newValue = document.createElement(element);
-  newValue.textContent = value;
+  newValue.textContent = `${label}: ${value}`;
   parentElement.appendChild(newValue);
-}
+};
 
 const handleFormSubmit = function(event){
   event.preventDefault();
   const listElement = document.createElement('li');
 
-  createElementWithText('p', this.name.value, listElement);
+  createElementWithText('p', 'Full Name', this.full_name.value, listElement);
 
-  const name = document.createElement('p');
-  name.textContent = this.name.value;
-  listElement.appendChild(name);
+  createElementWithText('p', 'Scientific name', this.sci_name.value, listElement);
 
-  const sci_name = document.createElement('p');
-  sci_name.textContent = this.sci_name.value;
-  listElement.appendChild(sci_name);
+  createElementWithText('p', 'Species', this.species.value, listElement);
 
-  const species = document.createElement('p');
-  species.textContent = this.species.value;
-  listElement.appendChild(species);
+  createElementWithText('p', 'ICUN Category', this.category.value, listElement);
 
-  const population = document.createElement('p');
-  population.textContent = this.population.value;
-  listElement.appendChild(population);
-
-  const continent = document.createElement('p');
-  continent.textContent = this.continent.value;
-  listElement.appendChild(continent);
+  createElementWithText('p', 'Continent', this.continent.value, listElement);
 
   const endangeredSpeciesList = document.querySelector('#endangered-species-list');
   endangeredSpeciesList.appendChild(listElement);
