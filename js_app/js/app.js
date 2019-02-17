@@ -18,7 +18,7 @@ const handleFormSubmit = function(event){
   event.preventDefault();
   const listElement = document.createElement('li');
 
-  createElementWithText('p', 'Full Name', this.full_name.value, listElement);
+  createElementWithText('p', 'Name', this.full_name.value, listElement);
 
   createElementWithText('p', 'Scientific name', this.sci_name.value, listElement);
 

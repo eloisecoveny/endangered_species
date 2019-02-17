@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#form-item {
+  margin-right: 1.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#endangered-species-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+#endangered-species-list li {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid Black;
+  border-radius: 3%;
+  /* background: #ddeaff; */
+}
