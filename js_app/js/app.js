@@ -8,28 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const createElementWithText = (element, label, value, parentElement) => {
-  const newValue = document.createElement(element);
-  newValue.textContent = `${label}: ${value}`;
+const createElementWithText = (tag, label, text, parentElement) => {
+  const newValue = document.createElement(tag);
+  newValue.textContent = `${label} ${text}`;
   parentElement.appendChild(newValue);
+  return newValue;
 };
 
 const handleFormSubmit = function(event){
   event.preventDefault();
-  const listElement = document.createElement('li');
 
-  createElementWithText('p', 'Name', this.full_name.value, listElement);
+  const listElement = createElementWithText('li', '', '', document.querySelector('#endangered-species-list'))
 
-  createElementWithText('p', 'Scientific name', this.sci_name.value, listElement);
-
+  createElementWithText('p', 'Name:', this.full_name.value, listElement);
+  createElementWithText('p', 'Scientific name:', this.sci_name.value, listElement);
   createElementWithText('p', 'Species', this.species.value, listElement);
+  createElementWithText('p', 'ICUN Category:', this.category.value, listElement);
+  createElementWithText('p', 'Continent:', this.continent.value, listElement);
 
-  createElementWithText('p', 'ICUN Category', this.category.value, listElement);
-
-  createElementWithText('p', 'Continent', this.continent.value, listElement);
-
-  const endangeredSpeciesList = document.querySelector('#endangered-species-list');
-  endangeredSpeciesList.appendChild(listElement);
+  document.querySelector('#endangered-species-list').appendChild(listElement);
 
   this.reset();
 }

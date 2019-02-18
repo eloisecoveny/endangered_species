@@ -24,17 +24,17 @@ h1 {
   justify-content: center;
 }
 
-#endangered-species-list {
+ul#endangered-species-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   justify-content: space-between;
+  flex: auto;
 }
 
-#endangered-species-list li {
+li {
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 2rem;
   border: 1px solid Black;
   border-radius: 3%;
-  /* background: #ddeaff; */
-}
+}s
